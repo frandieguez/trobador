@@ -36,11 +36,11 @@
                     </tr>
                     <tr>
                         <th>Original string</th>
-                        <td><?php echo preg_replace('/('.$this->searchTopic.')/i', '<span class="highlight">$1</span>', htmlentities($resul['original_unit'])); ?></td>
+                        <td><?php echo preg_replace('/('.$this->searchTopic.')/i', '<span class="highlight">$1</span>', htmlspecialchars($resul['original_unit'])); ?></td>
                     </tr>
                     <tr>
                         <th><?=Zend_Registry::get('Zend_Translate')->translate('m031')?></th>
-                        <td><?echo htmlentities($resul['translated_unit'])?></td>
+                        <td><?echo htmlspecialchars($resul['translated_unit'])?></td>
                     </tr>
                 </tbody
             </table>
